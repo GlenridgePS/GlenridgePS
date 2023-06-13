@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grade 1A</title>
+  <style>
+    /* Add your CSS styles here */
+  </style>
+</head>
+<body>
+  <h1>Grade 1A</h1>
+
+  <table id="learner-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Grade</th>
+        <th>Year</th>
+        <th>Balance</th>
+      </tr>
+    </thead>
+    <tbody id="learner-data">
+      <!-- Existing learner data from the database -->
+    </tbody>
+  </table>
+
+  <form action="insert.php" method="post">
+    <h2>Add Learner:</h2>
+    <label for="learner-name">Name:</label>
+    <input type="text" id="learner-name" name="learner-name">
+    <label for="learner-surname">Surname:</label>
+    <input type="text" id="learner-surname" name="learner-surname">
+    <label for="learner-grade">Grade:</label>
+    <input type="text" id="learner-grade" name="learner-grade">
+    <label for="learner-year">Year:</label>
+    <select id="learner-year" name="learner-year">
+      <option value="">Select Year</option>
+      <option value="2023">2023</option>
+      <option value="2024">2024</option>
+      <!-- Add more years as needed -->
+    </select>
+    <label for="learner-balance">Balance:</label>
+    <input type="text" id="learner-balance" name="learner-balance">
+    <button type="submit">Add</button>
+  </form>
+
+  <h2>Remove Learner:</h2>
+  <select id="remove-learner-select">
+    <option value="">Select Learner</option>
+    <option value="0">John Doe</option>
+    <option value="1">Jane Smith</option>
+    <!-- Add more learner options as needed -->
+  </select>
+  <button onclick="removeLearner()">Remove</button>
+
+  <script>
+    // JavaScript function to remove a learner
+    function removeLearner() {
+      var removeLearnerSelect = document.getElementById('remove-learner-select');
+      var selectedLearnerIndex = removeLearnerSelect.value;
+
+      if (selectedLearnerIndex !== '') {
+        var learnerData = document.getElementById('learner-data');
+        learnerData.deleteRow(selectedLearnerIndex);
+      }
+    }
+  </script>
+</body>
+</html>

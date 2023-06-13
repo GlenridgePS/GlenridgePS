@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grade 1A</title>
+  <style>
+    /* Add your CSS styles here */
+  </style>
+</head>
+<body>
+  <h1>Grade 1A</h1>
+
+  <div id="learner-list">
+    <h2>Learners:</h2>
+    <ul id="learner-names">
+      <li>John Doe</li>
+      <li>Jane Smith</li>
+    </ul>
+  </div>
+
+  <h2>Add Learner:</h2>
+  <input type="text" id="learner-name-input">
+  <button onclick="addLearner()">Add</button>
+
+  <h2>Remove Learner:</h2>
+  <select id="remove-learner-select">
+    <option value="">Select Learner</option>
+    <option value="0">John Doe</option>
+    <option value="1">Jane Smith</option>
+  </select>
+  <button onclick="removeLearner()">Remove</button>
+
+  <script>
+    // JavaScript function to add a learner
+    function addLearner() {
+      var learnerNameInput = document.getElementById('learner-name-input');
+      var learnerNamesList = document.getElementById('learner-names');
+
+      var newLearnerName = learnerNameInput.value;
+      if (newLearnerName !== '') {
+        var newLearnerListItem = document.createElement('li');
+        newLearnerListItem.textContent = newLearnerName;
+        learnerNamesList.appendChild(newLearnerListItem);
+
+        // Clear the input field after adding the learner
+        learnerNameInput.value = '';
+      }
+    }
+
+    // JavaScript function to remove a learner
+    function removeLearner() {
+      var removeLearnerSelect = document.getElementById('remove-learner-select');
+      var selectedLearnerIndex = removeLearnerSelect.value;
+
+      if (selectedLearnerIndex !== '') {
+        var learnerNamesList = document.getElementById('learner-names');
+        learnerNamesList.removeChild(learnerNamesList.childNodes[selectedLearnerIndex]);
+
+        // Reset the select element
+        removeLearnerSelect.value = '';
+      }
+    }
+  </script>
+</body>
+</html>

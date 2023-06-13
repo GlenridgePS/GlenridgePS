@@ -1,0 +1,102 @@
+/* main.css */
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+/* Header Styles */
+header {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #222;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* Content Styles */
+.content {
+  margin: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Fancy Text Styles */
+.fancy-text {
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-top: 50px;
+  text-transform: uppercase;
+}
+
+/* Background Image Styles */
+.background-image {
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  position: relative;
+}
+
+/* Logo Styles */
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+}
+
+/* Picture Styles */
+.picture {
+  margin: 20px;
+  text-align: center;
+}
+
+.picture img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.picture p {
+  margin: 0;
+  font-weight: bold;
+}
+
